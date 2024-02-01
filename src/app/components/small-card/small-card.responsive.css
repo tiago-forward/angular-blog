@@ -1,4 +1,7 @@
 @media (max-width: 768px){
+    .container-small-card-with-separator{
+        max-width: 350px;
+    }
 
     .small-card-image img{
         width: 150px;
@@ -6,5 +9,11 @@
 
     .small-card-title h1{
         font-size: 15px;
+    }
+}
+
+@media (max-width: 375px){
+    .container-small-card-with-separator{
+        width: 300px;
     }
 }
