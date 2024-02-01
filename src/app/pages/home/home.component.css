@@ -1,3 +1,10 @@
+header {
+    border: 1px solid #ff09ff;
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+}
+
 .container-articles{
     margin-top: 30px;
     display: flex;
