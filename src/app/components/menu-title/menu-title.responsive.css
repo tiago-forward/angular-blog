@@ -1,0 +1,13 @@
+@media (max-width: 1024px){
+    .menu-title-container h1{
+        margin: 15px 0px;
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 768px){
+    .menu-title-container h1{
+        margin: 15px 0px;
+        font-size: 30px;
+    }
+}

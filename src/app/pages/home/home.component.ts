@@ -8,7 +8,7 @@ import { MenuBarComponent } from "../../components/menu-bar/menu-bar.component";
     selector: 'app-home',
     standalone: true,
     templateUrl: './home.component.html',
-    styleUrl: './home.component.css',
+    styleUrls: ['./home.component.css', './home.responsive.css'],
     imports: [SmallCardComponent, BigCardComponent, MenuTitleComponent, MenuBarComponent]
 })
 export class HomeComponent {

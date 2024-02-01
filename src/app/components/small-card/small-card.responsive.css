@@ -1,0 +1,10 @@
+@media (max-width: 768px){
+
+    .small-card-image img{
+        width: 150px;
+    }
+
+    .small-card-title h1{
+        font-size: 15px;
+    }
+}
