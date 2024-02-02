@@ -8,7 +8,7 @@ import { MenuTitleComponent } from "../../components/menu-title/menu-title.compo
     standalone: true,
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.css', './home.responsive.css'],
-    imports: [SmallCardComponent, BigCardComponent, MenuTitleComponent]
+    imports: [ SmallCardComponent, BigCardComponent, MenuTitleComponent]
 })
 export class HomeComponent {
 

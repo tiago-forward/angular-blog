@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { dataFake } from '../../data/dataFake';
 
 @Component({
   selector: 'app-content',
@@ -7,8 +9,30 @@ import { Component } from '@angular/core';
   templateUrl: './content.component.html',
   styleUrl: './content.component.css'
 })
-export class ContentComponent {
-  photoCover: string = "https://assets-blog.hostgator.com.br/wp-content/uploads/2021/03/logo-angular.webp"
-  contentTitle: string = "Meu primeiro projeto com Angular"
-  contentDescription: string = "Criando meu primeiro projeto Angular, acompanhando o Bootcamp da Dio, Desenvolvimento Frontend com Angular.Criando meu primeiro projeto Angular, acompanhando o Bootcamp da Dio, Desenvolvimento Frontend com Angular.Criando meu primeiro projeto Angular, acompanhando o Bootcamp da Dio, Desenvolvimento Frontend com Angular.Criando meu primeiro projeto Angular, acompanhando o Bootcamp da Dio, Desenvolvimento Frontend com Angular.Criando meu primeiro projeto Angular, acompanhando o Bootcamp da Dio, Desenvolvimento Frontend com Angular.Criando meu primeiro projeto Angular, acompanhando o Bootcamp da Dio, Desenvolvimento Frontend com Angular.Criando meu primeiro projeto Angular, acompanhando o Bootcamp da Dio, Desenvolvimento Frontend com Angular."
+export class ContentComponent implements OnInit {
+  photoCover: string = ""
+  contentTitle: string = ""
+  contentDescription: string = ""
+  private id: string | null = "0"
+
+  constructor(
+    private route:ActivatedRoute
+  ){}
+
+  ngOnInit(): void {
+    this.route.paramMap.subscribe( value =>
+        this.id = value.get("id")
+      )
+
+      this.setValuesToComponent(this.id)
+  }
+
+  setValuesToComponent(id: string | null){
+    const result = dataFake.filter(
+      article => article.id == id)[0]
+
+      this.photoCover = result.photo
+      this.contentTitle = result.title
+      this.contentDescription = result.description
+  }
 }

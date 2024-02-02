@@ -1,11 +1,12 @@
 import { Component, Input } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-big-card',
   standalone: true,
-  imports: [],
   templateUrl: './big-card.component.html',
-  styleUrls: ['./big-card.component.css', './big-card.responsive.css']
+  styleUrls: ['./big-card.component.css', './big-card.responsive.css'],
+  imports: [RouterModule]
 })
 export class BigCardComponent {
 
@@ -15,4 +16,6 @@ export class BigCardComponent {
   cardTitle: string = ""
   @Input()
   cardDescription: string = ""
+  @Input()
+  id: string = "0"
 }
